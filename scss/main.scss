@@ -24,13 +24,13 @@ body {
     color: white;
 
     h1 {
-      font-size: 1.5rem;
+      font-size: 1.7rem;
       font-weight: 700;
     }
 
     p {
       margin-top: 1.4rem;
-      font-size: 0.85rem;
+      font-size: 1rem;
       font-weight: 500;
     }
   }
@@ -51,6 +51,11 @@ body {
       font-size: 1rem;
       text-align: center;
 
+      &:hover{
+        background-color: darken($blue, 10%);
+        cursor: pointer;
+      }
+
       span {
         font-weight: 700;
       }
@@ -61,6 +66,7 @@ body {
       padding: 1.5rem 1.5rem 1.5rem 1.875rem;
 
       border-radius: 8px;
+      box-shadow: 0 7px hsla(0, 0%, 0%, 0.2);
       background-color: white;
 
       input {
@@ -77,12 +83,39 @@ body {
         height: 3.5rem;
         width: 100%;
         background-color: $green;
-        border: 1px solid gray;
+
         border-bottom: 2px;
         border-radius: 4px;
+        box-shadow: 0px -4px 0px 0px inset hsla(0, 0%, 0%, 0.2);
+        
         color: white;
         font-size: 1rem;
         font-weight: 600;
+        text-transform: uppercase;
+
+        &:hover{
+          background-color: darken($green, 10%);
+          cursor: pointer;
+        }
+      }
+
+      p{
+        margin-top: 0.5rem;
+        color: $grayishBlue;
+        font-size: 0.75rem;
+        font-weight: 500;
+        text-align: center;
+
+        a{
+          text-decoration: none;
+          color: $red;
+          font-weight: 700;
+
+          &:hover{
+            color: darken($red, 10%);
+            cursor: pointer;
+          }
+        }
       }
     }
   }

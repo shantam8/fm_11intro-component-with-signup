@@ -33,17 +33,42 @@
       </div>
 
       <section class="inputBox">
-        <input type="text" id="inputFieldFirstName" placeholder="First Name" />
-        <p class="errorMsg" id="errorMsgFirstName" >First Name cannot be empty</p>
-        <input type="text" id="inputFieldLastName" placeholder="Last Name" />
+        <input
+          type="text"
+          id="inputFieldFirstName"
+          placeholder="First Name"
+          aria-label="first_name_field"
+        />
+        <p class="errorMsg" id="errorMsgFirstName">
+          First Name cannot be empty
+        </p>
+        <input
+          type="text"
+          id="inputFieldLastName"
+          placeholder="Last Name"
+          aria-label="last_name_field"
+        />
         <p class="errorMsg" id="errorMsgLastName">Last Name cannot be empty</p>
-        <input type="email" id="inputFieldEmail" placeholder="Email Address" />
-        <p class="errorMsg" id="errorMsgEmail">Looks like this is not an email</p>
-        <input type="password" id="inputFieldPassword" placeholder="Password" />
+        <input
+          type="email"
+          id="inputFieldEmail"
+          placeholder="Email Address"
+          aria-label="email_field"
+        />
+        <p class="errorMsg" id="errorMsgEmail">
+          Looks like this is not an email
+        </p>
+        <input
+          type="password"
+          id="inputFieldPassword"
+          placeholder="Password"
+          aria-label="password_field"
+        />
         <p class="errorMsg" id="errorMsgPassword">Password cannot be emtpy</p>
         <button type="submit" id="submitBtn">Claim your free trial</button>
         <p>
-          By clicking the button, you are agreeing to our <a href="#">Terms and Services</a> 
+          By clicking the button, you are agreeing to our
+          <a href="#">Terms and Services</a>
         </p>
       </section>
     </main>

@@ -7,11 +7,6 @@
   font-family: "Poppins", sans-serif;
 }
 
-.box-shadow {
-  -webkit-box-shadow: 0 7px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 7px rgba(0, 0, 0, 0.2);
-}
-
 body {
   width: 20.5rem;
   margin: 1.5rem auto;
@@ -91,11 +86,6 @@ body main .box {
   text-align: center;
 }
 
-body main .box:hover {
-  background-color: #4c4483;
-  cursor: pointer;
-}
-
 @media screen and (min-width: 1200px) {
   body main .box {
     height: 3.75rem;
@@ -123,6 +113,7 @@ body main .inputBox input {
   border: 1px solid #b9b6d3;
   border-radius: 4px;
   font-weight: 600;
+  position: relative;
 }
 
 body main .inputBox button {
@@ -161,5 +152,32 @@ body main .inputBox p a {
 body main .inputBox p a:hover {
   color: #ff4747;
   cursor: pointer;
+}
+
+body main .inputBox .errorMsg {
+  position: relative;
+  display: none;
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  color: #ff7a7a;
+  font-size: 0.7rem;
+  text-align: right;
+  font-style: italic;
+  font-weight: 600;
+}
+
+body main .inputBox .errorMsg::after {
+  content: url("../images/icon-error.svg");
+  position: absolute;
+  top: -2.9rem;
+  right: 1rem;
+  height: 24px;
+  width: 24px;
+}
+
+body main .inputBox .errorInTextField {
+  margin-bottom: 0.4rem;
+  border: 3px solid #ff7a7a;
+  color: #ff7a7a;
 }
 /*# sourceMappingURL=main.css.map */

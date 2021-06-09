@@ -32,20 +32,20 @@
         then $20/mo. thereafter
       </div>
 
-      <form action="post" class="inputBox">
+      <section class="inputBox">
         <input type="text" id="inputFieldFirstName" placeholder="First Name" />
-
+        <p class="errorMsg" id="errorMsgFirstName" >First Name cannot be empty</p>
         <input type="text" id="inputFieldLastName" placeholder="Last Name" />
-
+        <p class="errorMsg" id="errorMsgLastName">Last Name cannot be empty</p>
         <input type="email" id="inputFieldEmail" placeholder="Email Address" />
-
-        <input type="password" id="inputFieldPassw" placeholder="Password" />
-
+        <p class="errorMsg" id="errorMsgEmail">Looks like this is not an email</p>
+        <input type="password" id="inputFieldPassword" placeholder="Password" />
+        <p class="errorMsg" id="errorMsgPassword">Password cannot be emtpy</p>
         <button type="submit" id="submitBtn">Claim your free trial</button>
         <p>
           By clicking the button, you are agreeing to our <a href="#">Terms and Services</a> 
         </p>
-      </form>
+      </section>
     </main>
   </body>
 </html>

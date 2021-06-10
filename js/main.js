@@ -8,63 +8,71 @@ let errorMsgLastName = document.querySelector("#errorMsgLastName");
 let errorMsgEmail = document.querySelector("#errorMsgEmail");
 let errorMsgPassword = document.querySelector("#errorMsgPassword");
 
+let formCorrect = true;
+
 function checkFirstName() {
+  console.log("1");
   if (!inputFirstName.value == "") {
     inputFirstName.classList.remove("errorInTextField");
     errorMsgFirstName.style.display = "none";
-    return true;
   } else {
     inputFirstName.classList.add("errorInTextField");
     errorMsgFirstName.style.display = "block";
-    return false;
+    formCorrect = false;
   }
 }
 
 function checkLastName() {
+  console.log("2");
   if (!inputLastName.value == "") {
     inputLastName.classList.remove("errorInTextField");
     errorMsgLastName.style.display = "none";
-    return true;
   } else {
     inputLastName.classList.add("errorInTextField");
     errorMsgLastName.style.display = "block";
-    return false;
+    formCorrect = false;
   }
 }
 
 function checkEmail() {
+  console.log("3");
   let mailPattern = /\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/;
 
   if (!inputEmail.value == "" && inputEmail.value.match(mailPattern)) {
     inputEmail.classList.remove("errorInTextField");
     errorMsgEmail.style.display = "none";
-    return true;
   } else {
     inputEmail.classList.add("errorInTextField");
     errorMsgEmail.style.display = "block";
-    return false;
+    formCorrect = false;
   }
 }
 
 function checkPassword() {
+  console.log("4");
   if (!inputPassword.value == "") {
     inputPassword.classList.remove("errorInTextField");
     errorMsgPassword.style.display = "none";
-    return true;
   } else {
     inputPassword.classList.add("errorInTextField");
     errorMsgPassword.style.display = "block";
-    return false;
+    formCorrect = false;
   }
 }
 
 function checkSubmitForm() {
-  if (checkFirstName && checkLastName && checkEmail && checkPassword) {
+  formCorrect = true;
+  checkFirstName();
+  checkLastName();
+  checkEmail();
+  checkPassword();
+  if (formCorrect) {
     console.log("submit data");
   }
 }
 
 function init() {
+  console.log("dsafdfs");
   document
     .querySelector("#submitBtn")
     .addEventListener("click", checkSubmitForm);
